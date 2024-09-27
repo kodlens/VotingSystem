@@ -1,0 +1,570 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6833A76C-8BB0-412D-BFEA-B1F9AF97B00A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VotingSystem</RootNamespace>
+    <AssemblyName>VotingSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Graphicloads-Colorful-Long-Shadow-Hand-thumbs-up-like-2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.C1Excel.4, Version=4.1.20141.311, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1FlexGrid.4, Version=4.6.20141.822, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DPFPDevNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=696774c42ee28c57, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DPFPDevNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPEngNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=7fe76e7adf19964b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DPFPEngNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPGuiNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=d4f4a0bd9c559145, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DPFPGuiNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPShrNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=d902fe275a8d6cf2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DPFPShrNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPVerNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=4de0a9c4dcc83984, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DPFPVerNET.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MySql.Data, Version=8.0.13.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebCam_Capture, Version=1.0.2395.24959, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\WebCam_Capture.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcademicYearMainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcademicYearMainform.Designer.cs">
+      <DependentUpon>AcademicYearMainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountAdd.Designer.cs">
+      <DependentUpon>AccountAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountMainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountMainform.Designer.cs">
+      <DependentUpon>AccountMainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppData.cs" />
+    <Compile Include="BarangayAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BarangayAdd.Designer.cs">
+      <DependentUpon>BarangayAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BarangayMainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BarangayMainform.Designer.cs">
+      <DependentUpon>BarangayMainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Box.cs" />
+    <Compile Include="BrowseVotersByElecType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowseVotersByElecType.Designer.cs">
+      <DependentUpon>BrowseVotersByElecType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CandidateAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CandidateAdd.Designer.cs">
+      <DependentUpon>CandidateAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CandidateMainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CandidateMainform.Designer.cs">
+      <DependentUpon>CandidateMainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePasswordFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePasswordFrom.Designer.cs">
+      <DependentUpon>ChangePasswordFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckCandidateRequirementsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckCandidateRequirementsForm.Designer.cs">
+      <DependentUpon>CheckCandidateRequirementsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CityTownAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CityTownAdd.Designer.cs">
+      <DependentUpon>CityTownAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CityTownMainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CityTownMainform.Designer.cs">
+      <DependentUpon>CityTownMainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connection.cs" />
+    <Compile Include="InstituteAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstituteAdd.Designer.cs">
+      <DependentUpon>InstituteAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstituteMainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstituteMainform.Designer.cs">
+      <DependentUpon>InstituteMainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print_COC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Print_COC.Designer.cs">
+      <DependentUpon>Print_COC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_COC.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report_COC.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ElectionSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionSetup.Designer.cs">
+      <DependentUpon>ElectionSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionSetUpAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionSetUpAdd.Designer.cs">
+      <DependentUpon>ElectionSetUpAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FlatComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helper.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mainform.Designer.cs">
+      <DependentUpon>Mainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PositionAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionAdd.Designer.cs">
+      <DependentUpon>PositionAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PositionMainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionMainform.Designer.cs">
+      <DependentUpon>PositionMainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print_Result.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Print_Result.Designer.cs">
+      <DependentUpon>Print_Result.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print_VotedList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Print_VotedList.Designer.cs">
+      <DependentUpon>Print_VotedList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgramsAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramsAdd.Designer.cs">
+      <DependentUpon>ProgramsAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramsMainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramsMainform.Designer.cs">
+      <DependentUpon>ProgramsMainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProvinceAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProvinceAdd.Designer.cs">
+      <DependentUpon>ProvinceAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProvinceMainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProvinceMainform.Designer.cs">
+      <DependentUpon>ProvinceMainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterdVoterMainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterdVoterMainform.Designer.cs">
+      <DependentUpon>RegisterdVoterMainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterStudentVoter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterStudentVoter.Designer.cs">
+      <DependentUpon>RegisterStudentVoter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_NotVotedList.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report_NotVotedList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Result.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report_Result.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_VotedList.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report_VotedList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RequirementSetUpAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequirementSetUpAdd.Designer.cs">
+      <DependentUpon>RequirementSetUpAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RequirementSetupMainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequirementSetupMainform.Designer.cs">
+      <DependentUpon>RequirementSetupMainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResetPassword.Designer.cs">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scanner.cs" />
+    <Compile Include="SetUpPositionAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetUpPositionAdd.Designer.cs">
+      <DependentUpon>SetUpPositionAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetupPositionMainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetupPositionMainform.Designer.cs">
+      <DependentUpon>SetupPositionMainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UploadCandidateDocuments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UploadCandidateDocuments.Designer.cs">
+      <DependentUpon>UploadCandidateDocuments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VotersAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VotersAdd.Designer.cs">
+      <DependentUpon>VotersAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VotersMainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VotersMainform.Designer.cs">
+      <DependentUpon>VotersMainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VotersUploaderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VotersUploaderForm.Designer.cs">
+      <DependentUpon>VotersUploaderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Webcam.cs" />
+    <EmbeddedResource Include="AcademicYearMainform.resx">
+      <DependentUpon>AcademicYearMainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountAdd.resx">
+      <DependentUpon>AccountAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountMainform.resx">
+      <DependentUpon>AccountMainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BarangayAdd.resx">
+      <DependentUpon>BarangayAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BarangayMainform.resx">
+      <DependentUpon>BarangayMainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseVotersByElecType.resx">
+      <DependentUpon>BrowseVotersByElecType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CandidateAdd.resx">
+      <DependentUpon>CandidateAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CandidateMainform.resx">
+      <DependentUpon>CandidateMainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordFrom.resx">
+      <DependentUpon>ChangePasswordFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckCandidateRequirementsForm.resx">
+      <DependentUpon>CheckCandidateRequirementsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CityTownAdd.resx">
+      <DependentUpon>CityTownAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CityTownMainform.resx">
+      <DependentUpon>CityTownMainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstituteAdd.resx">
+      <DependentUpon>InstituteAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstituteMainform.resx">
+      <DependentUpon>InstituteMainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print_COC.resx">
+      <DependentUpon>Print_COC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_COC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report_COC.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionSetup.resx">
+      <DependentUpon>ElectionSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionSetUpAdd.resx">
+      <DependentUpon>ElectionSetUpAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mainform.resx">
+      <DependentUpon>Mainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionAdd.resx">
+      <DependentUpon>PositionAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionMainform.resx">
+      <DependentUpon>PositionMainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print_Result.resx">
+      <DependentUpon>Print_Result.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print_VotedList.resx">
+      <DependentUpon>Print_VotedList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramsAdd.resx">
+      <DependentUpon>ProgramsAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramsMainform.resx">
+      <DependentUpon>ProgramsMainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ProvinceAdd.resx">
+      <DependentUpon>ProvinceAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProvinceMainform.resx">
+      <DependentUpon>ProvinceMainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterdVoterMainform.resx">
+      <DependentUpon>RegisterdVoterMainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterStudentVoter.resx">
+      <DependentUpon>RegisterStudentVoter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_NotVotedList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report_NotVotedList.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Result.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report_Result.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_VotedList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report_VotedList.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RequirementSetUpAdd.resx">
+      <DependentUpon>RequirementSetUpAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RequirementSetupMainform.resx">
+      <DependentUpon>RequirementSetupMainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResetPassword.resx">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetUpPositionAdd.resx">
+      <DependentUpon>SetUpPositionAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetupPositionMainform.resx">
+      <DependentUpon>SetupPositionMainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UploadCandidateDocuments.resx">
+      <DependentUpon>UploadCandidateDocuments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VotersAdd.resx">
+      <DependentUpon>VotersAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VotersMainform.resx">
+      <DependentUpon>VotersMainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VotersUploaderForm.resx">
+      <DependentUpon>VotersUploaderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-icon_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WIA">
+      <Guid>{94A0E92D-43C0-494E-AC29-FD45948A5221}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\secrecy-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-icon32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-preferences-contact-list-icon32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level-icon32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Documents-icon32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-Group-48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-view-list-details-icon32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pencil-icon24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close-2-icon24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start-Menu-Search-icon24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Graphicloads-Colorful-Long-Shadow-Hand-thumbs-up-like-2.ico" />
+    <None Include="Resources\Logout-icon16x16.png" />
+    <None Include="Resources\SEO-icon16x16.png" />
+    <None Include="Resources\Settings-icon16x16.png" />
+    <None Include="Resources\User-Group-icon16x16.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
